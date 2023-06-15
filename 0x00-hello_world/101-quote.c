@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
+#include <fcntl.h>
 /**
  * main - Entry point
  * Return: Always 1 (Success)
