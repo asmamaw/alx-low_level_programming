@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * main -entry point funciton*/
+/* main - entry point funciton*/
 
-int main(void)
+int main (void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
+	
+        printf("with proper grammar, but the outcome is a piece of art,\n");
+
 	return (0);
 }
