@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
+/* entry point */
 int main()
 {
-	puts("programming is like building a multilingual puzzle\n");
+	puts("\"programming is like building a multilingual puzzle");
 	return 0;
 }
