@@ -4,7 +4,7 @@
 /**
  * main function
  * REturn: always 0.
- * /
+ */
  int main(void)
  {
  	char alpha;
@@ -16,7 +16,8 @@
 
 	putchar('\n');
 	return (0);
-}
+ }
+
  
 
 
