@@ -1,27 +1,21 @@
 #include "main.h"
 
 /**
- * print_diagonal -  checks for checks for a digit (0 through 9).
- * @n: n -  Variable
- *
+ * print_square -  checks for checks for a digit (0 through 9).
+ * @size: size -  Variable
  * Return: Always 0.
  */
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int x, y;
 
-	if (n > 0)
+	if (size > 0)
 	{
-		for (x = 1; x <= n; x++)
+		for (x = 1; x <= size; x++)
 		{
-			for (y = 1; y <= n; y++)
+			for (y = 1; y <= size; y++)
 			{
-				if (x == y)
-				{
-					_putchar(92);
-					break;
-				}
-				_putchar(' ');
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
