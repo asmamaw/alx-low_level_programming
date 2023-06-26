@@ -20,7 +20,7 @@ void print_rev(char *s)
 	len = i;
 	for (tmp = len - 1; tmp >= 0; tmp--)
 	{
-		write(1, s[tmp], (len - 1));
+		write(1, s, (len - 1));
 	}
 	write(1, "\n", 1);
 }
