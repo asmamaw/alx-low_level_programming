@@ -12,13 +12,15 @@ void print_rev(char *s)
 {
 	int i, len, tmp;
 
-	len = strlen(s);
-	for (i = 0; i < len / 2; i++)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		tmp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = tmp;
-		printf("%s", s);
+		i++
 	}
-	printf("\n");
+	len = i;
+	for (tmp = len - 1; tmp >= 0; tmp--)
+	{
+		write(1, s[j], (len - 1));
+	}
+	write(1, "\n", 1);
 }
