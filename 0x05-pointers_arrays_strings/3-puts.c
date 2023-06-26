@@ -8,5 +8,6 @@
  */
 void _puts(char *str)
 {
-	write(1, str, strlen(str+1));
+	write(1, str, strlen(str));
+	write(1, "\n", 1);
 }
