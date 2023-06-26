@@ -16,5 +16,5 @@ void puts2(char *s)
 		if (i % 2 == 0)
 			putchar(s[i]);
 	}
-	write(1, "\n", 1);
+	putchar("\n");
 }
