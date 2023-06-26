@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_array - a ffunction that prints elements of an array of integers
  * @a: a pointer to integer
