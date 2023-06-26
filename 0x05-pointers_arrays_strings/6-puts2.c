@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stdio.h>
 #include <unistd.h>
 /**
  * puts2 - a function that prints every other string
