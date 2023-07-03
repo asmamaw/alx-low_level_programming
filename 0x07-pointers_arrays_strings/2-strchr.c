@@ -2,7 +2,7 @@
 /**
  * _strchr - a function that locates a chaacter in a string
  * @s:a pointer to string
- * @c;located character
+ * @c:located character
  * Return:char pointer
  */
 char *_strchr(char *s, char c)
