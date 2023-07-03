@@ -1,8 +1,10 @@
 #include "main.h"
+#include <string.h>
+#include <unistd.h>
 /**
  * print_chessboard - function that prints the chessboard.
  *@a: first value -char
- *
+ *_putchar - a function that prints char
  */
 void print_chessboard(char (*a)[8])
 {
@@ -12,12 +14,8 @@ void print_chessboard(char (*a)[8])
 	{
 		for (j = 0; j < 8; j++)
 		{
-			_putchar (a[i][j]);
+			write(1, a[i][j], strlen(a));
 		}
-		_putchar('\n');
+		write(1, '\n', 1);
 	}
-	int _putchar(char c)
-{
-	return(write(1, &c, 1));
-}
 }
