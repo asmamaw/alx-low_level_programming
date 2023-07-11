@@ -5,39 +5,62 @@
 * @str : pointer
 * Return: Char
 */
-
+int word_len(char *str)
+{
+	int index = 0, len = 0;
+	while(*(str + index) && *(str + index) != ' ')
+	{
+		  len++;
+		  index++;
+	}
+	return (len);
+}
+int count_words(char *str)
+{
+	int index = 0, words = 0, len = 0;
+	
+	for (index = 0; *(str + index); index++)
+		len++;
+	for (index = 0; index < len; index++)
+	{
+		if (*(str + index) != ' ')
+		{
+			words++;
+			index += word_len(str + index);
+		}
+	}
+	return (words);
+}
 char **strtow(char *str)
 {
-	char **d;
-	int i;
-	int j = 0;
-	int con = 0;
-
-	if (str == NULL)
+	char **strings;
+	int index = 0, words, w, letters, l;
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
-
-	for (i = 0 ; str[i] != '\0' ; i++)
-	{
-		if (str[i] != 32)
-			con++;
-	}
-
-	d = malloc(sizeof(char) * con);
-
-	if (d == NULL)
+	words = count_words(str);
+	if (words == 0)
 		return (NULL);
-
-	for (i = 0 ; str[i] != '\0' ; i++)
+	strings = malloc(sizeof(char *) * (words + 1));
+	if (strings == NULL)
+		return (NULL);
+	for (w = 0; w < words; w++)
 	{
-		if (str[i] != 32)
+		while (str[index] == ' ')
+			index++;
+		letters = word_len(str + index);
+		strings[w] = malloc(sizeof(char) * (letters + 1));
+		if (strings[w] == NULL)
 		{
-			*d[j] = str[i];
-			j++;
+			for (; w >= 0; w--)
+				free(strings[w]);
+			free(strings);
+			return (NULL);
 		}
-		else
-		{
-		}
+		for (l = 0 l < letters; l++)
+			strings[w][l] = str[index++];
+		strings[w][l] = '\0';
 	}
-	return (d);
-	free(d);
+	strings[w] = NULL;
+	return (strings);
 }
+
