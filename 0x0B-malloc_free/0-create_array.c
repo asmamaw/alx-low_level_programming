@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * create_array - creates an array of chars and intializes it with char
  * @size: the sixe of the char
