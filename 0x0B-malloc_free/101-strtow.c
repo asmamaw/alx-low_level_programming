@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ * word_len - the length of words
+ * count_words - counts words
 * strtow - function that splits a string into words.
 * @str : pointer
 * Return: Char
@@ -8,17 +10,23 @@
 int word_len(char *str)
 {
 	int index = 0, len = 0;
-	while(*(str + index) && *(str + index) != ' ')
+
+	while (*(str + index) && *(str + index) != ' ')
 	{
-		  len++;
-		  index++;
+		len++;
+		index++;
 	}
 	return (len);
 }
+/**
+ * count_words - counts a string of words
+ * @str:pointer to string
+ * Return:integer
+ */
 int count_words(char *str)
 {
 	int index = 0, words = 0, len = 0;
-	
+
 	for (index = 0; *(str + index); index++)
 		len++;
 	for (index = 0; index < len; index++)
@@ -31,10 +39,16 @@ int count_words(char *str)
 	}
 	return (words);
 }
+/**
+ * strtow - splits string
+ * @str: char pointer
+ * Return: pointer to string
+ */
 char **strtow(char *str)
 {
 	char **strings;
 	int index = 0, words, w, letters, l;
+
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	words = count_words(str);
