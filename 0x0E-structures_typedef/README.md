@@ -1,0 +1,1 @@
+struct type in c
