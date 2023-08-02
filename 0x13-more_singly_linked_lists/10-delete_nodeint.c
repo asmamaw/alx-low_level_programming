@@ -27,14 +27,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	/* search of position to delete */
 	pos = index - 1;
-	while (pos && count != pos)
+	while (ptr && count != pos)
 	{
 		count++;
 		ptr = ptr->next;
 	}
 
 	/* general case */
-	if (count == pos && pos)
+	if (count == pos && ptr)
 	{
 		delete = ptr->next;
 		ptr->next = delete->next;
