@@ -12,10 +12,8 @@ int sum_listint(listint_t *head)
 
 	if (ptr != NULL)
 	{
-		sum += node->n;
-		node = node->next;
+		sum += ptr->n;
+		ptr = ptr->next;
 	}
-	ptr++;
-
 	return (sum);
 }
