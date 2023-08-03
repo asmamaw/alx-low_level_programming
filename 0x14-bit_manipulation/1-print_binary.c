@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 		bit = bit >> 1;
 
 	if (bit == 0)
-		write(1, &chr, 1);
+		_putchar(chr);
 
 	while (bit)
 	{
@@ -25,7 +25,7 @@ void print_binary(unsigned long int n)
 			chr = '1';
 		else
 			chr = '0';
-		write(1, &chr, 1);
+		_putchar(chr);
 		bit = bit >> 1;
 	}
 }
